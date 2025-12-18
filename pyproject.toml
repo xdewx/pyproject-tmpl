@@ -59,4 +59,5 @@ dev = [
     "pytest>=9.0.2",
     "ruff==0.13.1",
     "setuptools-scm>=9.2.2",
+    "pyinstaller>=6.17.0",
 ]

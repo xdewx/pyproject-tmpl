@@ -18,3 +18,5 @@
 - 运行cli：`uv run main.py --help`
 
 - 构建发布：`./scripts/publish`
+
+- 构建可执行文件：`./scripts/build`
