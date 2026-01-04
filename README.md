@@ -23,7 +23,8 @@
 - 构建发布：
     1. `cp .pypirc.example .pypirc`
     2. replace your token in .pypirc
-    3. `./scripts/publish`
+    3. `git tag vx.y.z`
+    4. `./scripts/publish`
 
 - 构建可执行文件：
     `./scripts/build`
