@@ -2,9 +2,12 @@
 logs
 dist
 build
+data
 *.log
 
 **/*.egg-info
 .pypirc
 
 src/sdk/_version.py
+
+!scripts/**
