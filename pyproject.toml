@@ -17,6 +17,14 @@ dependencies = [
     "typing-extensions>=4.15.0",
 ]
 
+[project.optional-dependencies]
+system = [
+    "psutil>=7.2.1",
+]
+
+all =[
+    "pyproject-tmpl[system]"
+]
 # 使用uv_build时
 # [build-system]
 # requires = ["uv_build>=0.7.4,<0.8.0"]
@@ -38,6 +46,7 @@ version_scheme = "guess-next-dev"
 local_scheme = "no-local-version"
 
 [tool.setuptools.package-dir]
+"" = "src"
 # 路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名
 mylib = "src/sdk"
 

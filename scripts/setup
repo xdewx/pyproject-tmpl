@@ -1,3 +1,5 @@
 #!/bin/bash
 
-uv sync && pre-commit install && pre-commit install --hook-type commit-msg
+uv sync --all-extras && \
+    pre-commit install && \
+    pre-commit install --hook-type commit-msg
