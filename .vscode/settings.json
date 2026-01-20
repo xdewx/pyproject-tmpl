@@ -6,16 +6,17 @@
     "python.analysis.extraPaths": [
         "${workspaceFolder}"
     ],
-    // 终端中生效的 PYTHONPATH（可选，确保终端运行时也能识别）
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder};${env:PYTHONPATH}"
-    },
-    "terminal.integrated.env.osx": {
-        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}:${env:PYTHONPATH}"
-    },
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}:${env:PYTHONPATH}"
-    },
+    // // 确保终端中 PYTHONPATH 包含 src 目录，但实际上这种方式不通用
+    // // 终端中生效的 PYTHONPATH（可选，确保终端运行时也能识别）
+    // "terminal.integrated.env.windows": {
+    //     "PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder};${env:PYTHONPATH}"
+    // },
+    // "terminal.integrated.env.osx": {
+    //     "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}:${env:PYTHONPATH}"
+    // },
+    // "terminal.integrated.env.linux": {
+    //     "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}:${env:PYTHONPATH}"
+    // },
     "python.envFile": "${workspaceFolder}/.env",
     "jupyter.envFile": "${workspaceFolder}/.env"
 }

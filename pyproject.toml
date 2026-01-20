@@ -13,7 +13,7 @@ dependencies = [
     "alembic>=1.17.2",
     "ipa-python-kit>=0.0.7",
     "sqlmodel>=0.0.31",
-    "typer>=0.20.0",
+    "typer>=0.21.1",
     "typing-extensions>=4.15.0",
 ]
 
@@ -73,5 +73,5 @@ dev = [
     "pytest>=9.0.2",
     "ruff==0.13.1",
     "setuptools-scm>=9.2.2",
-    "pyinstaller>=6.17.0",
+    "pyinstaller>=6.18.0",
 ]

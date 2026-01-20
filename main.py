@@ -1,13 +1,14 @@
+import sys
+from pathlib import Path
+
 from typer import Typer
 
-from biz import demo_biz_add
+# TODO: i don't want to add this manually, but i have no idea how to do it automatically at present
+sys.path.append(str(Path(__file__).parent / "src"))
+
+print(sys.path)
 
 cmd = Typer()
-
-
-@cmd.command()
-def add(a: int, b: int) -> int:
-    return demo_biz_add(a, b)
 
 
 @cmd.command()

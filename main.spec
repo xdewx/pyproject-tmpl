@@ -2,7 +2,7 @@
 
 datas=[
     ("src/conf","conf"),
-    ("src/sdk","sdk"),
+    ("src/sdk","mylib"),
     ("src/biz","biz"),
     ("alembic","alembic"),
     ("alembic.ini","."),
@@ -14,8 +14,10 @@ a = Analysis(
     binaries=[],
     datas=datas,
     hiddenimports=[
+        "typer", "click", "ctypes", "_ctypes",
         "colorlog",
         'scipy', 'scipy._cyutility',
+        "alembic",
         'sqlalchemy', 'sqlmodel', "sqlalchemy.sql.default_comparator",
         "sqlalchemy.engine.url", "sqlalchemy.dialects.sqlite",
         'sqlite3',
