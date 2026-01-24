@@ -6,7 +6,7 @@ from typer import Typer
 # TODO: i don't want to add this manually, but i have no idea how to do it automatically at present
 sys.path.append(str(Path(__file__).parent / "src"))
 
-print(sys.path)
+# print(sys.path)
 
 cmd = Typer()
 
@@ -24,6 +24,13 @@ def setup_db():
 
     # if you need to use database, invoke setup_database freely
     setup_database()
+
+
+@cmd.command()
+def version():
+    from my_sdk.version import __version__
+
+    print(__version__)
 
 
 if __name__ == "__main__":
