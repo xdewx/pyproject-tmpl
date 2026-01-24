@@ -25,6 +25,7 @@ system = [
 all =[
     "pyproject-tmpl[system]"
 ]
+
 # 使用uv_build时
 # [build-system]
 # requires = ["uv_build>=0.7.4,<0.8.0"]
@@ -32,14 +33,14 @@ all =[
 
 # [tool.uv.build-backend]
 # module-root = "src"
-# module-name = "mylib"
+# module-name = "my_sdk"
 
 [build-system]
 requires = ["setuptools>=80.0", "setuptools-scm>=9"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-version_file = "src/sdk/_version.py"
+version_file = "src/version.py"
 version_scheme = "guess-next-dev"
 # version_scheme = "only-version"
 # local_scheme = "node-and-date"
@@ -47,14 +48,16 @@ local_scheme = "no-local-version"
 
 [tool.setuptools.package-dir]
 "" = "src"
-# 路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名
-mylib = "src/sdk"
 
-# [tool.setuptools.packages]
-# find = {where = ["src"], include = ["sdk"]}
+# # SDK实现方式1：路径映射，便于用户通过有辨识度的方式导入模块而不是使用sdk或重命名，本地开发时无法实现代码提示
+# my_sdk = "src/my_sdk"
 
-[tool.setuptools]
-packages = ["mylib"]
+# [tool.setuptools]
+# packages = ["my_sdk"]
+
+# SDK实现方式2：通过自动发现打包模块，结合sdk重命名，可以支持代码提示
+[tool.setuptools.packages]
+find = {where = ["src"], include = ["my_sdk"]}
 
 [tool.uv]
 index = [

@@ -8,6 +8,6 @@ data
 **/*.egg-info
 .pypirc
 
-src/sdk/_version.py
+src/version.py
 
 !scripts/**

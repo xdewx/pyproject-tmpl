@@ -13,16 +13,19 @@
 
 ## introduction
 
-the project uses `src-layout`, includes `sdk` (for publish) and `biz` (for business logic).
-`sdk` is designed for publish and no need to rename, we use file/folder mapping `mylib=src/sdk` in `pyproject.toml`.
+the project uses `src-layout`, includes `my_sdk` (for publish) and `biz` (for business logic).
+
+~~`sdk` is designed for publish and no need to rename, we use file/folder mapping `my_sdk=src/sdk` in `pyproject.toml`.~~
+
+feel free to rename `my_sdk` to `[the name you want]` in the whole project for your own use or publish.
 
 ### dev
 
 before you start:
 
 1. must run `./scripts/setup`
-1. just replace `mylib` with `[the name you want]` in the whole project
-1. remember to `uv pip install -e .[all]` to make sure `mylib` is available in development.
+1. replace `my_sdk` with `[the name you want]` in the whole project
+1. ~~remember to `uv pip install -e .[all]` to make sure `my_sdk` is available in development.~~
 
 ### unit test
 
