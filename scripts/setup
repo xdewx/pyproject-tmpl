@@ -1,5 +1,0 @@
-#!/bin/bash
-
-uv sync --all-extras --index-strategy unsafe-best-match && \
-    ([[ ! -f .git/hooks/pre-commit ]] && pre-commit install) && \
-    ([[ ! -f .git/hooks/commit-msg ]] && pre-commit install --hook-type commit-msg)

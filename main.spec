@@ -1,9 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 datas=[
-    ("src/conf","conf"),
-    ("src/my_sdk","my_sdk"),
-    ("src/biz","biz"),
     ("alembic","alembic"),
     ("alembic.ini","."),
 ]

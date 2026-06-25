@@ -10,6 +10,7 @@ data
 **/*.egg-info
 .pypirc
 
-src/my_sdk/version.py
+# local env (copy from .env.example)
+.env
 
-!scripts/**
+src/my_sdk/version.py
